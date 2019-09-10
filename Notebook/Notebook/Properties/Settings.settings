@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Notebook.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Persons.json</Value>
+    </Setting>
+    <Setting Name="maxAge" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">125</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
