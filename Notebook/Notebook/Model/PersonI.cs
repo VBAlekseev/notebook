@@ -1,12 +1,6 @@
-﻿using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows;
-using System.Xml.Serialization;
-
-namespace Notebook
+﻿namespace Notebook
    {
-   public partial class Person : NotifyPropertyChanged//, IDataErrorInfo
+   public partial class Person : NotifyPropertyChanged
       {
       private string firstName;
       private string lastName;

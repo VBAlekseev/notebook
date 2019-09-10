@@ -1,10 +1,7 @@
 ﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System;
-using System.Xml.Serialization;
 using System.IO;
-using System.Windows.Forms;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Data;
@@ -12,7 +9,7 @@ using System.Windows.Data;
 namespace Notebook
    {
    [Serializable]
-   public class NoteBookViewModel : DependencyObject, INotifyPropertyChanged
+   public class NoteBookViewModel : NotifyPropertyChanged// DependencyObject, INotifyPropertyChanged
       {
       IDataSerialization serializer;
       IDialog dialogWindow;
@@ -90,15 +87,7 @@ namespace Notebook
          Items = CollectionViewSource.GetDefaultView(Persons);
          Items.Filter = FilterPerson;
          }
-
-
-      public event PropertyChangedEventHandler PropertyChanged;
-      public void OnPropertyChanged([CallerMemberName]string prop = "")
-         {
-         if(PropertyChanged != null)
-            PropertyChanged(this, new PropertyChangedEventArgs(prop));
-         }
-      
+            
 
       // Command for creating new person.
       private Command addPersonCommand;
