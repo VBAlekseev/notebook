@@ -38,6 +38,9 @@
     <StartupObject>Notebook.StartUpClass</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
@@ -60,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="StartUp\Bootstraper.cs" />
     <Compile Include="Miscellaneous\Commands\Command.cs" />
     <Compile Include="Miscellaneous\Commands\Dialog.cs" />
     <Compile Include="Miscellaneous\Commands\IDialog.cs" />
@@ -67,7 +71,7 @@
     <Compile Include="Model\PersonII.cs" />
     <Compile Include="Miscellaneous\Serialization\IDataSerialization.cs" />
     <Compile Include="Miscellaneous\Serialization\JSONSerialization.cs" />
-    <Compile Include="StartUpClass.cs" />
+    <Compile Include="StartUp\StartUpClass.cs" />
     <Compile Include="ViewModel\NoteBookViewModel.cs" />
     <Compile Include="View\NoteBookView.xaml.cs">
       <DependentUpon>NoteBookView.xaml</DependentUpon>
@@ -100,6 +104,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

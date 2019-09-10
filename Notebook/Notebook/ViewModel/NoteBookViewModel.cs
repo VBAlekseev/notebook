@@ -9,7 +9,7 @@ using System.Windows.Data;
 namespace Notebook
    {
    [Serializable]
-   public class NoteBookViewModel : NotifyPropertyChanged// DependencyObject, INotifyPropertyChanged
+   public class NoteBookViewModel : NotifyPropertyChanged
       {
       IDataSerialization serializer;
       IDialog dialogWindow;
@@ -73,9 +73,9 @@ namespace Notebook
                      
 
 
-      public NoteBookViewModel(IDialog dialog, IDataSerialization serializer) 
+      public NoteBookViewModel(IDataSerialization serializer) 
          {
-         dialogWindow = dialog;
+         dialogWindow = new Dialog();
 
          Persons = new ObservableCollection<Person>();
          

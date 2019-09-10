@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autofac;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,25 +10,16 @@ using System.Windows;
 namespace Notebook
    {
    class StartUpClass
-      {
-
-      
-      
+      {           
       [STAThread]
       public static void Main(string [] args)
          {
-         JSONSerialization serialization = new JSONSerialization();
-         NoteBookViewModel noteBookViewModel = new NoteBookViewModel(new Dialog(), serialization);
-         
-
-
          Application app = new Application();
-         NoteBookView window = new NoteBookView(noteBookViewModel);
+
+         Bootstraper bootstraper = new Bootstraper();
+         IContainer container = bootstraper.Bootsrap();
+         NoteBookView window = container.Resolve<NoteBookView>();
          app.Run(window);
          }
-
-
-     
-
       }
    }
