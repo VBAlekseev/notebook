@@ -63,7 +63,7 @@ namespace Notebook
                      if((DateTime.Now.Year - Year) > Properties.Settings.Default.maxAge)
                         return String.Format("Возраст не должен быть больше максимального возраста: {0}.", Properties.Settings.Default.maxAge);
                      if(Year > DateTime.Now.Year)
-                        return String.Format("Год не может быть больше текущего: {0}.", Properties.Settings.Default.maxAge);
+                        return String.Format("Год не может быть больше текущего: {0}.", DateTime.Now.Year);
                      break;
                      }
                case "Phone":
